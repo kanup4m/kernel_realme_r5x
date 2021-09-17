@@ -208,7 +208,6 @@ void audio_aio_async_read_ack(struct q6audio_aio *audio, uint32_t token,
 			insert_eos_buf(audio, filled_buf);
 			/* Reset flag back to indicate eos intimated */
 			audio->eos_rsp = 0;
-			ret=0;
 		} else {
 			filled_buf->meta_info.meta_out.num_of_frames
 							 = payload[9];
